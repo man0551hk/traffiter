@@ -92,18 +92,27 @@
 <body>
     <div class="app">
         <div class="container-fluid">
-            <div class="row" id ="splashScreen">
-                
+            <div class="row" id ="loginScreen">
                 <div class = "col-md-12" style = "color:white;display:table-cell;text-align:center;vertical-align:middle;z-index:3;">
-                    <a href ="Wall.aspx" style="color:#fff;"><h1>Traffiter</h1></a>
-                    <div id = "result"></div>
+                <img src = "images/Unknown-person.gif" alt="loginImage" class="img-thumbnail" />
+                <br />
+                <h3>Login</h3>
+                    <br />
+                    
+                    <input type = "text" ID = "login" class = "form-control" placeholder="登入"/>
+                    <br />
+                    <input type = "password" ID = "password" class = "form-control" placeholder="密碼"/>
+                    <br />
+                    <button id = "loginBtn" class = "btn btn-primary" size ="200" >登入</button>
+                    <br />
+                    <a href ="forgotPassword.aspx" style ="color:#fff;"><h4>忘記密碼</h4></a>
+                  
+                    <a href ="CreateAccount.aspx" style ="color:#fff;"><h4>登記 Traffiter</h4></a>
                 </div>
-                <div class="layer"></div>
-            </div>
+            </div>            
         </div>
     </div>
     <script>
-        $('#splashScreen').css('height', $(window).height());
         $('#loginScreen').css('height', $(window).height());
     </script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
