@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-export default class traffitApp extends Component {
+export default class traffiti extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('traffitApp', () => traffitApp);
+AppRegistry.registerComponent('traffiti', () => traffiti);
