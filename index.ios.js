@@ -1,34 +1,42 @@
-import React, { Component } from 'react';
-import { AppRegistry, Text } from 'react-native';
-import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import React, { Component } from 'react'
+import { AppRegistry, Text, View } from 'react-native'
+import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base'
 
-import Splash from './components/splashScreen';
-import Wall from './components/wall';
+import Splash from './components/splashScreen'
+import Wall from './components/wall'
 import CustomerFooter from './components/customFooter'
 
+let element = null
+
 export default class traffiti extends Component {
-  render() {
-    let page = 'home';
-    let element = null;
-    function changePage(pageName) {
-      page = pageName;
+  constructor (props) {
+    super(props)
+    this.state = ({page: 'home'});
+  }
+  changePage (pageName) {
+      this.setState({page: pageName})
+  }
+  render () {
+    alert(this.state.page)
+    if (this.state.page === 'home') {
+      //element = <Button onPress = {()=>this.changePage('recently')}><Text>test</Text></Button>
+      element = <Container>
+                  <Content>
+                    <Splash/>
+                    <Wall />
+                  </Content>
+                  <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+                </Container>
+    } else if (this.state.page === 'recently') {
+      element = <Container>
+                  <Content>
+                    <Wall />
+                  </Content>
+                  <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+                </Container>
     }
-    if (page === 'home') {
-      element = <Content>
-                <Splash/>
-                <Wall />
-                </Content>;
-    } else if (page === 'recently') {
-      element = <Content><Splash/></Content>;
-    }
-    return (
-            <Container>
-                  {element}
-              <CustomerFooter parentMethod = {this.changePage} page = {this.page}/>
-            </Container>
-    );
+    return element
   }
 }
 
-
-AppRegistry.registerComponent('traffiti', () => traffiti);
+AppRegistry.registerComponent('traffiti', () => traffiti)

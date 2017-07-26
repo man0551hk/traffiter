@@ -4,11 +4,17 @@ import React, { Component } from 'react'
 import { Container, Content, Footer, FooterTab, Button, Icon, Text } from 'native-base';
 
 export default class CustomFooter extends Component {
+    constructor(props) {
+        super(props);
+    }    
+    changePage(pageName) {  
+        this.props.parentMethod(pageName);
+    }
   render () {
     return (
                 <Footer >
                 <FooterTab>
-                    <Button active>
+                    <Button active onPress = {() => this.changePage('recently')}>
                         <Icon name='ionic' />
                         <Text>最新發佈</Text>
                     </Button>
