@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, Image, Dimensions, TouchableOpacity } from 'react-native';
 
 
 
 export default class Grid extends Component {
+    constructor(props) {
+        super(props);
+    }    
+    changePage(pageName) {  
+        this.props.parentMethod(pageName);
+    }  
   render() {
     let pic = {
       uri: 'https://s3-ap-southeast-1.amazonaws.com/traffiti/client_upload/tokyo.jpg'
@@ -14,7 +20,9 @@ export default class Grid extends Component {
     return (
       <View style={styles.grid}>
         <View>
+          <TouchableOpacity onPress = {() => this.changePage('wallDetail')}>
           <Image style={styles.image} source={pic} />
+          </TouchableOpacity>
         </View>        
         <View>
           <Text style={styles.titleText}>Tokyo</Text>

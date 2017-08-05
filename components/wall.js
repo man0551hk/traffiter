@@ -16,36 +16,41 @@ export default class Wall extends Component {
       }
     );
   }  
+
+  changePage(pageName) {  
+    this.props.parentMethod(pageName);
+  }  
+
   render () {
     const json = {'pageNum': 1, 'lang_id': 1};
     let result = [];
-    function getWallData() {
-        fetch('http://api.traffiti.co/api/Wall/GetWall', {
-            method: "POST",
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-            },            
-            body: JSON.stringify(json)
-          }
-        )
-        .then((response) => response.json())
-        .then((responseData) => {
-            result = JSON.stringify(responseData);
-        })
-        .done();
-    }
+    // function getWallData() {
+    //     fetch('http://api.traffiti.co/api/Wall/GetWall', {
+    //         method: "POST",
+    //         headers: {
+    //           'Accept': 'application/json',
+    //           'Content-Type': 'application/json',
+    //         },            
+    //         body: JSON.stringify(json)
+    //       }
+    //     )
+    //     .then((response) => response.json())
+    //     .then((responseData) => {
+    //         result = JSON.stringify(responseData);
+    //     })
+    //     .done();
+    // }
 
     return (
      
       <View>
-        <Button onPress = {() => getWallData()}>
+        {/* <Button onPress = {() => getWallData()}>
           <Text>aa</Text>
-        </Button>
-         {/* <Grid/>
-        <Grid/>
-        <Grid/>
-        <Grid/>  */}
+        </Button> */}
+        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
+        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
+        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
+        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>  
       </View>
     )
   }
