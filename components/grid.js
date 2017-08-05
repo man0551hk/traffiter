@@ -12,10 +12,10 @@ export default class Grid extends Component {
     }  
   render() {
     let pic = {
-      uri: 'https://s3-ap-southeast-1.amazonaws.com/traffiti/client_upload/tokyo.jpg'
+      uri: this.props.photo_path
     };  
     let profile = {
-      uri: 'https://s3-ap-southeast-1.amazonaws.com/traffiti/client_profile/profile1.png'
+      uri: this.props.profile_pic
     }  
     return (
       <View style={styles.grid}>
@@ -25,19 +25,14 @@ export default class Grid extends Component {
           </TouchableOpacity>
         </View>        
         <View>
-          <Text style={styles.titleText}>Tokyo</Text>
-          <Text style={styles.dateText}>2017-7-20</Text>
-          <Text style={styles.descriptionText}>
-            It is a long established fact that a reader will be distracted 
-            by the readable content of a page when looking at its layout. 
-            The point of using Lorem Ipsum is that it has a more-or-less normal 
-            distribution of letters, as opposed to using...
-          </Text>
+          <Text style={styles.titleText}>{this.props.location}</Text>
+          <Text style={styles.dateText}>{this.props.date_text}</Text>
+          <Text style={styles.descriptionText}>{this.props.content}</Text>
         </View>
 
         <View style={styles.profileView}>
           <Image style={styles.profile} source={profile} />
-          <Text style={styles.profileName}>Vivian Chan</Text>
+          <Text style={styles.profileName}>{this.props.author_name}</Text>
         </View>
       </View>
 

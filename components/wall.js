@@ -7,7 +7,7 @@ import Grid from './grid'
 //import {fetchApiDataInAction} from '../components/commonHelper'
 
 const json = {'pageNum': 1, 'lang_id': 1};
-let result = [];    
+let element = [];
 export default class Wall extends Component {
   constructor (props) {
     super(props)
@@ -15,7 +15,7 @@ export default class Wall extends Component {
       {
         page: 'recently',
         login: false,
-        result: []
+        result: null
       }
     );
   }  
@@ -25,27 +25,11 @@ export default class Wall extends Component {
   }  
 
   componentDidMount() {
-        fetch('http://api.traffiti.co/api/Wall/GetWall', {
-            method: "POST",
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json',
-            },            
-            body: JSON.stringify(json)
-          }
-        )
-        .then((response) => response.json())
-        .then((responseData) => {
-          this.setState({
-            result: JSON.stringify(responseData)
-          });
-            //result = JSON.stringify(responseData);
-        })
-        .done();
-    
+   this.getWallData().done();
   }
-  getWallData() {
-        fetch('http://api.traffiti.co/api/Wall/GetWall', {
+
+  async getWallData() {
+    await fetch('http://api.traffiti.co/api/Wall/GetWall', {
             method: "POST",
             headers: {
               'Accept': 'application/json',
@@ -55,26 +39,32 @@ export default class Wall extends Component {
           }
         )
         .then((response) => response.json())
-        .then((responseData) => {
-            result = JSON.stringify(responseData);
+        .then(responseData => {
+          this.setState(
+            {
+              result:responseData
+            }
+          );
+          //   //wall_id, location, content, photo_path, author_id, author_name, profile_pic, data_text
         })
         .done();
-        alert('a' + result)
   }
 
   render () {
-
+    if (this.state.result) {
+      element = [];
+      this.state.result.map((wall) => {
+        element.push(
+          <Grid key = {wall.wall_id} parentMethod={this.changePage.bind(this)} page={this.state.page}
+            location = {wall.location} content = {wall.content} photo_path = {wall.photo_path}
+            author_id = {wall.author_id}
+            author_name = {wall.author_name} profile_pic = {wall.profile_pic} date_text = {wall.date_text}
+          />
+        );
+      });
+    }
     return (
-     
-      <View>
-        {/* <Button onPress = {() => getWallData()}>
-          <Text>aa</Text>
-        </Button> */}
-        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
-        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
-        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>
-        <Grid parentMethod={this.changePage.bind(this)} page={this.state.page}/>  
-      </View>
+      <View>{element}</View>
     )
   }
 }
