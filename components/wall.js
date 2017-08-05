@@ -6,13 +6,16 @@ import { Button, Text } from 'native-base';
 import Grid from './grid'
 //import {fetchApiDataInAction} from '../components/commonHelper'
 
+const json = {'pageNum': 1, 'lang_id': 1};
+let result = [];    
 export default class Wall extends Component {
   constructor (props) {
     super(props)
     this.state = (
       {
         page: 'recently',
-        login: false
+        login: false,
+        result: []
       }
     );
   }  
@@ -21,25 +24,45 @@ export default class Wall extends Component {
     this.props.parentMethod(pageName);
   }  
 
+  componentDidMount() {
+        fetch('http://api.traffiti.co/api/Wall/GetWall', {
+            method: "POST",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },            
+            body: JSON.stringify(json)
+          }
+        )
+        .then((response) => response.json())
+        .then((responseData) => {
+          this.setState({
+            result: JSON.stringify(responseData)
+          });
+            //result = JSON.stringify(responseData);
+        })
+        .done();
+    
+  }
+  getWallData() {
+        fetch('http://api.traffiti.co/api/Wall/GetWall', {
+            method: "POST",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },            
+            body: JSON.stringify(json)
+          }
+        )
+        .then((response) => response.json())
+        .then((responseData) => {
+            result = JSON.stringify(responseData);
+        })
+        .done();
+        alert('a' + result)
+  }
+
   render () {
-    const json = {'pageNum': 1, 'lang_id': 1};
-    let result = [];
-    // function getWallData() {
-    //     fetch('http://api.traffiti.co/api/Wall/GetWall', {
-    //         method: "POST",
-    //         headers: {
-    //           'Accept': 'application/json',
-    //           'Content-Type': 'application/json',
-    //         },            
-    //         body: JSON.stringify(json)
-    //       }
-    //     )
-    //     .then((response) => response.json())
-    //     .then((responseData) => {
-    //         result = JSON.stringify(responseData);
-    //     })
-    //     .done();
-    // }
 
     return (
      

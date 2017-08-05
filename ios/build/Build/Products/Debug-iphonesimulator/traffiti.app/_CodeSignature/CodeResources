@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		U9nGJZrcysGjLUeu0v+VEOac8ZA=
+		fxvoBQjKRY/jGr2X/wz0wqSeHxE=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -184,6 +184,10 @@
 		<data>
 		0hPLcrGRiL8HEYGWbYL+qhcqBZI=
 		</data>
+		<key>Frameworks/XCTest.framework/TextBasedStubs/XCTest.tbd</key>
+		<data>
+		RHXSWYnDetHKL50HLNwIgcxIwd8=
+		</data>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<data>
 		WCRTesUWwwgFmL3LE2MH7WTx524=
@@ -239,7 +243,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EJPBT+wHNRLAZgv0VqVIWYQ/fzI=
+		sDxgamETUqUVp3MYVNM/7BPSxtY=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -267,7 +271,7 @@
 		</data>
 		<key>PlugIns/traffitiTests.xctest.dSYM/Contents/Resources/DWARF/traffitiTests</key>
 		<data>
-		dnPyScJLrHwfMz3NAIyCqVU4lAU=
+		r+KGrFJcIxjeE7aG0ZfYYcliHZA=
 		</data>
 		<key>PlugIns/traffitiTests.xctest/Info.plist</key>
 		<data>
@@ -279,7 +283,7 @@
 		</data>
 		<key>PlugIns/traffitiTests.xctest/traffitiTests</key>
 		<data>
-		xMX0nUxUr0yjdx11kNUHW95mhMM=
+		O9S1+M46OvZXW+IA0HScNh0rkHo=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -296,11 +300,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			U9nGJZrcysGjLUeu0v+VEOac8ZA=
+			fxvoBQjKRY/jGr2X/wz0wqSeHxE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5GvFRkpAqD+JyTr5vQWY8mAFdzS4z/our1A4kx/TS3Q=
+			PEalV3urf6F+LWb89pjMHC6LKnBSZ7B/iGhW/uTrwU0=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -787,6 +791,17 @@
 			jnKXP8AnVeA8lhMYYv9wWZO1A6Rn46h/Dz1jgopnxYQ=
 			</data>
 		</dict>
+		<key>Frameworks/XCTest.framework/TextBasedStubs/XCTest.tbd</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RHXSWYnDetHKL50HLNwIgcxIwd8=
+			</data>
+			<key>hash2</key>
+			<data>
+			RfOHN5ApwfFKQ0kOGy+D2jFbhte2JrxJG0XuiajQofk=
+			</data>
+		</dict>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<dict>
 			<key>hash</key>
@@ -797,6 +812,11 @@
 			<data>
 			IADHMXRzh2kXQfDooCuUCvpfdBho8wtowxBPGULESx8=
 			</data>
+		</dict>
+		<key>Frameworks/XCTest.framework/XCTest.tbd</key>
+		<dict>
+			<key>symlink</key>
+			<string>TextBasedStubs/XCTest.tbd</string>
 		</dict>
 		<key>Frameworks/XCTest.framework/XPCServices/XCUIRecorderService.xpc/Info.plist</key>
 		<dict>
@@ -980,11 +1000,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dnPyScJLrHwfMz3NAIyCqVU4lAU=
+			r+KGrFJcIxjeE7aG0ZfYYcliHZA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BuFrnVUiS8xJ0WnEQYoq/qny7ggWE7t61JtTaLB7dv8=
+			5yHLpR3LRusk8zr2pwBi0syritcKiAW5wd+895wXvkU=
 			</data>
 		</dict>
 		<key>PlugIns/traffitiTests.xctest/Info.plist</key>
@@ -1013,11 +1033,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xMX0nUxUr0yjdx11kNUHW95mhMM=
+			O9S1+M46OvZXW+IA0HScNh0rkHo=
 			</data>
 			<key>hash2</key>
 			<data>
-			k42hmYN+If4bFrJ++H4rBoNYGhgeu5OWg6oi0j7M4qc=
+			3XGhgid0FhJBUzPIlDz8QXcMC9JCTjL18OIWnyIGl8U=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>
