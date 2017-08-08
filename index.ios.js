@@ -4,11 +4,13 @@ import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base
 
 import Splash from './components/splashScreen'
 import Wall from './components/wall'
+import WallDetail from './components/wallDetail'
 import CustomerFooter from './components/customFooter'
 import Login from './components/login'
 import Favorite from './components/favorite'
 import Plan from './components/plan'
 import PlanDetail from './components/planDetail'
+
 let element = null
 
 export default class traffiti extends Component {
@@ -17,25 +19,33 @@ export default class traffiti extends Component {
     this.state = (
       {
         page: 'recently',
-        login: false
+        login: false, 
+        wall_id: 0
       }
     );
   }
   changePage (pageName) {
       this.setState({page: pageName})
   }
+  changeWallDetailPage(pageName, wall_id)
+  {
+    this.setState({
+      page: pageName,
+      wall_id: wall_id
+    })
+  }
   render () {
     if (this.state.page === 'recently') {
       element = <Container>
                   <Content>
-                    <Wall parentMethod={this.changePage.bind(this)} page={this.state.page}/>
+                    <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'wallDetail') {
       element = <Container>
                   <Content>
-                    <Favorite/>
+                    <WallDetail wall_id={this.state.wall_id} />
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>

@@ -20,8 +20,8 @@ export default class Wall extends Component {
     );
   }  
 
-  changePage(pageName) {  
-    this.props.parentMethod(pageName);
+  changeWallDetailPage(pageName, wall_id) {  
+    this.props.parentMethod(pageName, wall_id);
   }  
 
   componentDidMount() {
@@ -55,9 +55,9 @@ export default class Wall extends Component {
       element = [];
       this.state.result.map((wall) => {
         element.push(
-          <Grid key = {wall.wall_id} parentMethod={this.changePage.bind(this)} page={this.state.page}
+          <Grid key = {wall.wall_id} parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}
             location = {wall.location} content = {wall.content} photo_path = {wall.photo_path}
-            author_id = {wall.author_id}
+            author_id = {wall.author_id} wall_id={wall.wall_id}
             author_name = {wall.author_name} profile_pic = {wall.profile_pic} date_text = {wall.date_text}
           />
         );
