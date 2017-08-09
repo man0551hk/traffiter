@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { AppRegistry, Text, View, ScrollView } from 'react-native'
+import { AppRegistry, Text, View, ScrollView, NavigatorIOS } from 'react-native'
 import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base'
+import PropTypes from 'prop-types';
 
 import Splash from './components/splashScreen'
 import Wall from './components/wall'
@@ -10,6 +11,8 @@ import Login from './components/login'
 import Favorite from './components/favorite'
 import Plan from './components/plan'
 import PlanDetail from './components/planDetail'
+
+import Test from './components/test'
 
 let element = null
 
@@ -36,12 +39,61 @@ export default class traffiti extends Component {
   }
   render () {
     if (this.state.page === 'recently') {
-      element = <Container>
-                  <Content>
-                    <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
-                  </Content>
-                  <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
-                </Container>
+
+      //  var recently =  <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>;
+      // element =<Container>
+      //         <Content>
+      //           <NavigatorIOS initialRoute = {{
+      //             title:'Recently',
+      //             component: Wall
+      //           }}
+      //           configureScene = {(route) => {
+      //             return Navigator.SceneConfigs.PushFromRight;
+      //             }
+      //           }
+      //           renderScene = {(route, navigator) => {
+      //             var Component = route.component;
+      //             return (
+      //               <Component {...route.params} navigator={navigator} parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page} />
+      //             );
+      //             }
+      //           }
+      //           />
+      //         </Content>
+
+      //         </Container>
+
+      element = <NavigatorIOS
+                    initialRoute={{
+                      component: Wall,
+                      title: '',
+                      passProps: {parentMethod: this.changeWallDetailPage.bind(this),
+                        page:this.state.page
+                        }
+                    }} style = {{flex:1}} 
+                  />
+
+      // element = <Container style = {{flex:1}}>
+      //             <Content style = {{flex:1}}>
+      //               <NavigatorIOS
+      //               initialRoute={{
+      //                 component: Wall,
+      //                 title: 'My Initial Scene',
+      //                 passProps: {parentMethod: this.changeWallDetailPage.bind(this),
+      //                   page:this.state.page
+      //                   }
+      //               }} style = {{flex:1}}
+      //             />
+      //             </Content>
+      //             <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+      //           </Container>
+
+      // element = <Container>
+      //             <Content>
+      //               <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
+      //             </Content>
+      //             <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+      //           </Container>
     } else if (this.state.page === 'wallDetail') {
       element = <Container>
                   <Content>

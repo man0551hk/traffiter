@@ -7,9 +7,10 @@ export default class Grid extends Component {
     constructor(props) {
         super(props);
     }    
-    changeWallDetailPage(pageName, wall_id) {  
-        this.props.parentMethod(pageName, wall_id);
+    changeWallDetailPage(wall_id) {  
+        this.props.parentMethod(wall_id);
     }  
+      
   render() {
     let pic = {
       uri: this.props.photo_path
@@ -20,7 +21,7 @@ export default class Grid extends Component {
     return (
       <View style={styles.grid}>
         <View>
-          <TouchableOpacity onPress = {() => this.changeWallDetailPage('wallDetail', this.props.wall_id)}>
+          <TouchableOpacity onPress = {() => this.changeWallDetailPage(this.props.wall_id)}>
           <Image style={styles.image} source={pic} />
           </TouchableOpacity>
         </View>        
