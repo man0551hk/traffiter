@@ -8,7 +8,7 @@ export default class Grid extends Component {
         super(props);
     }    
     changeWallDetailPage(wall_id) {  
-        this.props.parentMethod(wall_id);
+        this.props.parentMethod('wallDetail', wall_id);
     }  
       
   render() {
@@ -45,7 +45,7 @@ const win = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   grid: {
-    borderWidth: 0.5,
+    //borderWidth: 0.5,
     backgroundColor: '#ededed',
     margin: 10,
     flex: 0.5,

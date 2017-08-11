@@ -8,7 +8,7 @@ export default class WallDetail extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        position: 1,
+        position: 0,
         interval: null,
         result: null
       }        
@@ -94,7 +94,7 @@ const win = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   grid: {
-    borderWidth: 0.5,
+    //borderWidth: 0.5,
     backgroundColor: '#ededed',
     margin: 10,
     flex: 0.5,

@@ -51,19 +51,6 @@ export default class Wall extends Component {
         .done();
   }
 
-    _goToDetailPage(wall_id){
-      this.props.navigator.push({
-          component: WallDetail,
-          title: '訂單詳情',
-          rightButtonTitle: '購物車',
-          onRightButtonPress: function(){
-              alert('進入我的購物車');
-          },
-          passProps: {
-            wall_id: wall_id
-          }
-      });
-    }
 
   render () {
     if (this.state.result) {
@@ -71,7 +58,7 @@ export default class Wall extends Component {
       this.state.result.map((wall) => {
         element.push(
           <Grid key = {wall.wall_id} 
-             page={this.state.page} parentMethod = {this._goToDetailPage.bind(this)} 
+             page={this.state.page} parentMethod = {this.changeWallDetailPage.bind(this)} 
             location = {wall.location} content = {wall.content} photo_path = {wall.photo_path}
             author_id = {wall.author_id} wall_id={wall.wall_id}
             author_name = {wall.author_name} profile_pic = {wall.profile_pic} date_text = {wall.date_text}

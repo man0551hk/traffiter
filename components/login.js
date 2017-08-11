@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from 'react-native'
 import { Container, Header, Content, Item, Input, Icon } from 'native-base'
 
+
 export default class Login extends Component {
   render () {
     let pic = {
@@ -25,6 +26,8 @@ export default class Login extends Component {
             <Input placeholder='密碼' placeholderTextColor="#fff" />
             {/* <Icon active name='swap' /> */}
           </Item>
+        </View>
+        <View>
         </View>
       </View>
     )

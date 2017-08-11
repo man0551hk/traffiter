@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppRegistry, Text, View, ScrollView, NavigatorIOS } from 'react-native'
+import { AppRegistry, Text, View, ScrollView, NavigatorIOS, StyleSheet } from 'react-native'
 import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base'
 import PropTypes from 'prop-types';
 
@@ -13,7 +13,7 @@ import Plan from './components/plan'
 import PlanDetail from './components/planDetail'
 
 import Test from './components/test'
-
+import Facebook from './components/facebookLogin'
 let element = null
 
 export default class traffiti extends Component {
@@ -63,15 +63,15 @@ export default class traffiti extends Component {
 
       //         </Container>
 
-      element = <NavigatorIOS
-                    initialRoute={{
-                      component: Wall,
-                      title: '',
-                      passProps: {parentMethod: this.changeWallDetailPage.bind(this),
-                        page:this.state.page
-                        }
-                    }} style = {{flex:1}} 
-                  />
+      // element = <NavigatorIOS
+      //               initialRoute={{
+      //                 component: Wall,
+      //                 title: '',
+      //                 passProps: {parentMethod: this.changeWallDetailPage.bind(this),
+      //                   page:this.state.page
+      //                   }
+      //               }} style = {{flex:1}} 
+      //             />
 
       // element = <Container style = {{flex:1}}>
       //             <Content style = {{flex:1}}>
@@ -88,54 +88,60 @@ export default class traffiti extends Component {
       //             <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
       //           </Container>
 
-      // element = <Container>
-      //             <Content>
-      //               <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
-      //             </Content>
-      //             <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
-      //           </Container>
+      element = <Container>
+                  <Content style={styles.content}>
+                    <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
+                  </Content>
+                  <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+                </Container>
     } else if (this.state.page === 'wallDetail') {
       element = <Container>
-                  <Content>
+                  <Content style={styles.content}>
                     <WallDetail wall_id={this.state.wall_id} />
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'favorite') {
       element = <Container>
-                  <Content>
+                  <Content style={styles.content}>
                     <Favorite/>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'plan') {
       element = <Container>
-                  <Content>
+                  <Content style={styles.content}>
                     <Plan parentMethod={this.changePage.bind(this)} page={this.state.page} />
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'planDetail') {
       element = <Container>
-                  <Content>
+                  <Content style={styles.content}>
                     <PlanDetail parentMethod={this.changePage.bind(this)} page={this.state.page}/>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'account' && this.state.login === true) {
       element = <Container>
-                  <Content>
+                  <Content style={styles.content}>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } else if (this.state.page === 'account' && this.state.login === false) {
       element = <Container>
-                  <Login/>
+                  <Facebook/>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
     } 
     return element
   }
 }
+
+const styles = StyleSheet.create({
+  content: {
+    paddingTop:20
+  }
+})
 
 AppRegistry.registerComponent('traffiti', () => traffiti)
