@@ -11,9 +11,9 @@ import Login from './components/login'
 import Favorite from './components/favorite'
 import Plan from './components/plan'
 import PlanDetail from './components/planDetail'
+import SignUp from './components/signup'
 
-import Test from './components/test'
-import Facebook from './components/facebookLogin'
+
 let element = null
 
 export default class traffiti extends Component {
@@ -90,7 +90,8 @@ export default class traffiti extends Component {
 
       element = <Container>
                   <Content style={styles.content}>
-                    <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
+                    {/* <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/> */}
+                    <SignUp/>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
@@ -130,10 +131,26 @@ export default class traffiti extends Component {
                 </Container>
     } else if (this.state.page === 'account' && this.state.login === false) {
       element = <Container>
-                  <Facebook/>
+                  <Content style={styles.content}>
+                    <Login parentMethod={this.changePage.bind(this)}/>
+                  </Content>   
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>
-    } 
+    } else if (this.state.page === 'signup') {
+      element = <Container>
+                  <Content style={styles.content}>
+                    <SignUp />
+                  </Content>
+                <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+              </Container>
+    } else if (this.state.page === 'forgetpassword') {
+      element = <Container>
+                  <Content style={styles.content}>
+
+                  </Content>
+                <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
+              </Container>
+    }
     return element
   }
 }
