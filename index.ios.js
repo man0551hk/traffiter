@@ -90,8 +90,7 @@ export default class traffiti extends Component {
 
       element = <Container>
                   <Content style={styles.content}>
-                    {/* <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/> */}
-                    <SignUp/>
+                    <Wall parentMethod={this.changeWallDetailPage.bind(this)} page={this.state.page}/>
                   </Content>
                   <CustomerFooter parentMethod={this.changePage.bind(this)} page={this.state.page} />
                 </Container>

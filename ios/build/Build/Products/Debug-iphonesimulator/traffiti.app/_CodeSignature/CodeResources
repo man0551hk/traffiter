@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		TQJmWcAEey+XgDNc1I8vNQF8F4I=
+		uX4WkbW14Zafo6FqP70AS6wKebw=
 		</data>
 		<key>Entypo.ttf</key>
 		<data>
@@ -184,10 +184,6 @@
 		<data>
 		0hPLcrGRiL8HEYGWbYL+qhcqBZI=
 		</data>
-		<key>Frameworks/XCTest.framework/TextBasedStubs/XCTest.tbd</key>
-		<data>
-		RHXSWYnDetHKL50HLNwIgcxIwd8=
-		</data>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<data>
 		WCRTesUWwwgFmL3LE2MH7WTx524=
@@ -243,7 +239,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sDxgamETUqUVp3MYVNM/7BPSxtY=
+		PFHslsLEMVqVmp9bkFwG4QekOR8=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -259,7 +255,7 @@
 		</data>
 		<key>Octicons.ttf</key>
 		<data>
-		nDHzgr8cV2wncaeFbvmESHJDPUg=
+		XF4wYBlFFw56fAqk3ggmUtwnNQI=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -271,19 +267,27 @@
 		</data>
 		<key>PlugIns/traffitiTests.xctest.dSYM/Contents/Resources/DWARF/traffitiTests</key>
 		<data>
-		t1XnGhPflWNY1JUDjUeL4hNp1m0=
+		wLYGlNcBYX1Ka3PK/HE/lLNoxQg=
 		</data>
 		<key>PlugIns/traffitiTests.xctest/Info.plist</key>
 		<data>
-		ozQ6z/8exR3d+LCoWBRDG6uavGY=
+		f0XzHQsvVtbV00PlmkKllfhKIWs=
 		</data>
 		<key>PlugIns/traffitiTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
-		YiFWWCw66AOGzucjj5MgsdIBEXw=
+		FEcdg0CVvLva0OPXGRnRSpX1uAo=
 		</data>
 		<key>PlugIns/traffitiTests.xctest/traffitiTests</key>
 		<data>
-		NAIwCLR67JUjD51AYy+hqS3GHWY=
+		ezXjTuMwS4Gks9vQr6GGzbtM3PQ=
+		</data>
+		<key>Roboto.ttf</key>
+		<data>
+		HR1B/K3Fcd7LZEQhG3mTuZzpJuI=
+		</data>
+		<key>Roboto_medium.ttf</key>
+		<data>
+		rbw73kJLz328OPFIAFyDGYJYkfI=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -293,6 +297,10 @@
 		<data>
 		C9pZx7zT05J94EfgkYdaRCi/0as=
 		</data>
+		<key>rubicon-icon-font.ttf</key>
+		<data>
+		wWjJGa/hGKWVqUjSz9izW6v2ekU=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -300,11 +308,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TQJmWcAEey+XgDNc1I8vNQF8F4I=
+			uX4WkbW14Zafo6FqP70AS6wKebw=
 			</data>
 			<key>hash2</key>
 			<data>
-			DaU4xvKkrVnYdCKFPcpcwsk7K+9ctoYZYBvmMqDT1XE=
+			W3rVc/K2ZQkzx+qYB9KosDmokWZ5G5yMWN/iOgGRUZ8=
 			</data>
 		</dict>
 		<key>Entypo.ttf</key>
@@ -791,17 +799,6 @@
 			jnKXP8AnVeA8lhMYYv9wWZO1A6Rn46h/Dz1jgopnxYQ=
 			</data>
 		</dict>
-		<key>Frameworks/XCTest.framework/TextBasedStubs/XCTest.tbd</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RHXSWYnDetHKL50HLNwIgcxIwd8=
-			</data>
-			<key>hash2</key>
-			<data>
-			RfOHN5ApwfFKQ0kOGy+D2jFbhte2JrxJG0XuiajQofk=
-			</data>
-		</dict>
 		<key>Frameworks/XCTest.framework/XCTest</key>
 		<dict>
 			<key>hash</key>
@@ -812,11 +809,6 @@
 			<data>
 			IADHMXRzh2kXQfDooCuUCvpfdBho8wtowxBPGULESx8=
 			</data>
-		</dict>
-		<key>Frameworks/XCTest.framework/XCTest.tbd</key>
-		<dict>
-			<key>symlink</key>
-			<string>TextBasedStubs/XCTest.tbd</string>
 		</dict>
 		<key>Frameworks/XCTest.framework/XPCServices/XCUIRecorderService.xpc/Info.plist</key>
 		<dict>
@@ -978,11 +970,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nDHzgr8cV2wncaeFbvmESHJDPUg=
+			XF4wYBlFFw56fAqk3ggmUtwnNQI=
 			</data>
 			<key>hash2</key>
 			<data>
-			zLOa3HG6r1FR8G3HAL3RBNLhvSx9Ru2iAlXyNPR6vuo=
+			sw1aNDI0CqTWoFwAl/BoysSnzVrJqfoRSzi3y6/KJCM=
 			</data>
 		</dict>
 		<key>PlugIns/traffitiTests.xctest.dSYM/Contents/Info.plist</key>
@@ -1000,44 +992,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t1XnGhPflWNY1JUDjUeL4hNp1m0=
+			wLYGlNcBYX1Ka3PK/HE/lLNoxQg=
 			</data>
 			<key>hash2</key>
 			<data>
-			8OElwX6XFhmCrQAfFv4EuvLPHu6BXcEXf1FqC2oZehE=
+			VMmoCWbW7eNdfOoFRoLitPzeSceNJxo9ksqWGveFilY=
 			</data>
 		</dict>
 		<key>PlugIns/traffitiTests.xctest/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ozQ6z/8exR3d+LCoWBRDG6uavGY=
+			f0XzHQsvVtbV00PlmkKllfhKIWs=
 			</data>
 			<key>hash2</key>
 			<data>
-			8A2N1ARWe4jRUkGo1i++hkVclu2f4pTJgN+iARsLeF0=
+			VaX/ps5Z6ed+rt9gIuYJIuUaf0IsqNTvzCSn9gNUOt0=
 			</data>
 		</dict>
 		<key>PlugIns/traffitiTests.xctest/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YiFWWCw66AOGzucjj5MgsdIBEXw=
+			FEcdg0CVvLva0OPXGRnRSpX1uAo=
 			</data>
 			<key>hash2</key>
 			<data>
-			ckkUXmCLCfQzCFrqUWWVc0Vk48fh++/EZaKarvM/aFw=
+			FArTnctNHITkTselsmC9X/fAack1DoMm2eNOEZjhag4=
 			</data>
 		</dict>
 		<key>PlugIns/traffitiTests.xctest/traffitiTests</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			NAIwCLR67JUjD51AYy+hqS3GHWY=
+			ezXjTuMwS4Gks9vQr6GGzbtM3PQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			2dsLLUHlYPTAVsuXmO8YcPSuvVtqLm7gnbW5vipJbS0=
+			ZzXqwXOfQuzWjEfQLKSxCq1BojkeNwNLvR/wwge7sM8=
+			</data>
+		</dict>
+		<key>Roboto.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HR1B/K3Fcd7LZEQhG3mTuZzpJuI=
+			</data>
+			<key>hash2</key>
+			<data>
+			su+ryl6kvFbuqClxNwa1zQeIuCrKFTvUrd6bFXOTO08=
+			</data>
+		</dict>
+		<key>Roboto_medium.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rbw73kJLz328OPFIAFyDGYJYkfI=
+			</data>
+			<key>hash2</key>
+			<data>
+			0Mj0SndLhJDO7imInNq8cjgfo1+2IWGaeP0oIR2QJBw=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>
@@ -1060,6 +1074,17 @@
 			<key>hash2</key>
 			<data>
 			17EKHr4YMOWi8I9JA7moDiwZEsDdL3O5P88r+DIhZgI=
+			</data>
+		</dict>
+		<key>rubicon-icon-font.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wWjJGa/hGKWVqUjSz9izW6v2ekU=
+			</data>
+			<key>hash2</key>
+			<data>
+			QidT7Dg0ix8cbNL7jAOGB1UJ8qZuZ1+mfLlrbeEAZhM=
 			</data>
 		</dict>
 	</dict>

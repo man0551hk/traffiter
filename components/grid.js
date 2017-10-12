@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ededed',
     margin: 10,
     flex: 0.5,
-    padding:5
+    padding:10
   },
   dateText: {
     color: '#a0a0a8',

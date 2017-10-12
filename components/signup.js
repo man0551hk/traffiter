@@ -55,7 +55,10 @@ export default class Signup extends Component {
           }
         });
       }    
-    render () {       
+    render () {
+      let selectPic = {
+        uri: 'https://s3-ap-southeast-1.amazonaws.com/traffiti/app_images/Cursor-Select-icon.png'
+      };          
         return (
             <View>
                 <Item>
@@ -70,14 +73,33 @@ export default class Signup extends Component {
                 <Item>
                     <Input placeholder='確認密碼'  password={true}/>
                 </Item>
-                <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
-                   
-                    { this.state.avatarSource === null ? <Text>Select a Photo</Text> :
-                        <Image style={styles.avatar} source={this.state.avatarSource} />
-                    }
-                   
-                 </TouchableOpacity>                                   
+                <View style={styles.container}>
+                  <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
+                      { this.state.avatarSource === null ? <View><Image style={styles.selectPic} source={selectPic} /><Text>選擇照片</Text></View> :
+                          <Image style={styles.avatar} source={this.state.avatarSource} />
+                      }
+                  </TouchableOpacity>     
+                </View>  
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 20
+  },  
+  selectPic: {
+    height: 100,
+    width: 100,
+    alignItems: 'flex-start'    
+  },  
+  avatar: {
+    borderRadius: 75,
+    width: 150,
+    height: 150
+  }
+});

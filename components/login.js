@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Image, ScrollView, Dimensions } from 'react-native'
-import { Container, Header, Content, Item, Input, Icon } from 'native-base'
-
+import { StyleSheet, Text, View, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native'
+import { Container, Header, Content, Item, Input, Icon, Button } from 'native-base'
+var {FBLogin, FBLoginManager} = require('react-native-facebook-login');
 
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+  }    
+  changePage(pageName) {  
+    this.props.parentMethod(pageName);
+  }  
   render () {
     let pic = {
       uri: 'https://s3-ap-southeast-1.amazonaws.com/traffiti/app_images/image3.jpeg'
@@ -24,11 +30,26 @@ export default class Login extends Component {
           <Item>
             <Icon style={{color: '#fff'}} active name='ios-radio-button-on' />
             <Input placeholder='密碼' placeholderTextColor="#fff" />
-            {/* <Icon active name='swap' /> */}
           </Item>
         </View>
-        <View>
+        <View style={{paddingTop:20}}>
+          <Button block success style={{width:300}}><Text style={{color:'#fff'}}>登入</Text></Button>
         </View>
+        <View style={{flex: 1, flexDirection: 'row', paddingTop:20}}>
+          <FBLogin />
+        </View>     
+        <View style={{flex: 1, flexDirection: 'row', paddingTop:20}}>
+          <View style={{paddingRight:30}}>
+            <TouchableOpacity onPress = {() => this.changePage('signup')}>
+              <Text style = {styles.hyperLink}>立即登記</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{paddingLeft:30}}>
+            <TouchableOpacity onPress = {() => this.changePage('forgetpassword')}>
+              <Text style = {styles.hyperLink}>忘記密碼</Text>
+            </TouchableOpacity>
+          </View>
+        </View>              
       </View>
     )
   }
@@ -37,7 +58,7 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: 680,
+    height: 595,
     justifyContent: 'center',
     alignItems: 'center'
   },
@@ -56,6 +77,10 @@ const styles = StyleSheet.create({
     margin: 10,
     color: '#fff',
     backgroundColor: 'rgba(0,0,0,0)'
+  }, 
+  hyperLink: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#fff',
+    textDecorationLine: "underline"
   }
-
 })
